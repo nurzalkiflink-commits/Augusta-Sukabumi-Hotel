@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms & Akomodasi - Augusta Hotel & Resort</title>
+    <meta name="description" content="Pilihan kamar terbaik di Augusta Hotel & Resort Sukabumi. Mulai dari Standard Room hemat, Glamping unik, hingga Suite Room mewah berfasilitas VIP.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M25,30 C35,30 45,30 45,45 C45,60 35,60 25,60 C15,60 15,45 15,45 C15,30 25,30 Z M75,30 C65,30 55,30 55,45 C55,60 65,60 75,60 C85,60 85,45 85,45 C85,30 75,30 Z' fill='%23E43F15'/%3E%3C/svg%3E">
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem('augusta-lang');
+            if (savedLang === 'en') {
+                document.documentElement.classList.add('lang-en-active');
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info-left">
+                <span><i class="fa-solid fa-location-dot"></i> Jl. Raya Cikukulu No.72, Sukabumi</span>
+                <span class="separator">|</span>
+                <span><i class="fa-solid fa-phone"></i> 0857 9544 1992</span>
+            </div>
+            <div class="top-info-right">
+                <a href="https://www.instagram.com/augustacikukulu/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/6285795441992" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Header & Navbar -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-container" aria-label="Augusta Hotel Home">
+                <img src="images/Augusta Sukabumi.png" data-fallback="images/Augusta-Sukabumi.png" alt="Augusta Hotel Logo" class="hotel-logo-img">
+            </a>
+
+            <!-- Mobile Navigation Toggle -->
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav id="primary-navigation" class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><span class="lang-id">Beranda</span><span class="lang-en">Home</span></a></li>
+                    <li class="nav-item dropdown">
+                        <a href="rooms.html" class="nav-link dropdown-toggle active"><span class="lang-id">Room</span><span class="lang-en">Room</span> <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="rooms.html?room=Suite">Suite Room</a></li>
+                            <li><a href="rooms.html?room=Glamping">Glamping Room</a></li>
+                            <li><a href="rooms.html?room=VIP">VIP Room</a></li>
+                            <li><a href="rooms.html?room=Deluxe 1">Deluxe 1</a></li>
+                            <li><a href="rooms.html?room=Deluxe 2">Deluxe 2</a></li>
+                            <li><a href="rooms.html?room=Superior">Superior Room</a></li>
+                            <li><a href="rooms.html?room=Standard">Standard Room</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="facilities.html" class="nav-link"><span class="lang-id">Fasilitas</span><span class="lang-en">Facilities</span></a></li>
+                    <li class="nav-item"><a href="restaurant.html" class="nav-link"><span class="lang-id">Menu Restoran</span><span class="lang-en">Restaurant</span></a></li>
+                    <li class="nav-item"><a href="booking.html#paket" class="nav-link"><span class="lang-id">Paket Augusta</span><span class="lang-en">Packages</span></a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link"><span class="lang-id">Tentang Kami</span><span class="lang-en">About Us</span></a></li>
+                </ul>
+                
+                <!-- Language Switcher -->
+                <div class="nav-controls">
+                    <button class="lang-toggle-btn" onclick="toggleLanguage()" aria-label="Toggle Language">
+                        <span class="lang-id">EN</span>
+                        <span class="lang-en">ID</span>
+                    </button>
+                </div>
+                
+                <a href="booking.html" class="btn btn-primary nav-cta"><span class="lang-id">Pesan Sekarang</span><span class="lang-en">Book Now</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header Banner -->
+    <section class="page-header-banner" style="background-image: linear-gradient(rgba(28, 43, 31, 0.6), rgba(28, 43, 31, 0.8)), url('https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1920&q=80');">
+        <div class="container">
+            <h1><span class="lang-id">Pilihan Kamar & Akomodasi</span><span class="lang-en">Our Rooms & Accommodations</span></h1>
+            <p><span class="lang-id">Kenyamanan istirahat terbaik Anda adalah dedikasi utama kami</span><span class="lang-en">Your ultimate comfort and rest is our prime dedication</span></p>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section class="rooms-section section-padding" style="padding-top: 80px;">
+        <div class="container">
+            <!-- Category Filter -->
+            <div class="rooms-filter-container">
+                <button class="filter-btn active" onclick="filterRooms('all')">
+                    <span class="lang-id">Semua Kamar</span><span class="lang-en">All Rooms</span>
+                </button>
+                <button class="filter-btn" onclick="filterRooms('luxury')">
+                    <span class="lang-id">Tipe Mewah (VIP/Suite)</span><span class="lang-en">Luxury Tier (VIP/Suite)</span>
+                </button>
+                <button class="filter-btn" onclick="filterRooms('nature')">
+                    <span class="lang-id">Nuansa Alam & Glamping</span><span class="lang-en">Nature & Glamping</span>
+                </button>
+                <button class="filter-btn" onclick="filterRooms('budget')">
+                    <span class="lang-id">Kelas Bisnis & Hemat</span><span class="lang-en">Business & Budget</span>
+                </button>
+            </div>
+
+            <!-- Rooms Grid -->
+            <div class="rooms-grid">
+                <!-- 1. Suite -->
+                <div class="room-card" data-room-type="Suite">
+                    <div class="room-img-container">
+                        <img src="images/rooms/suite.jpg" data-fallback="https://i.ibb.co.com/CKvTg8jL/Whats-App-Image-2023-12-18-at-10-43-47-1.jpg?auto=format&fit=crop&w=800&q=80" alt="Augusta Suite Room" class="room-img" loading="lazy">
+                        <span class="room-price-badge">Rp 1.250.000<small>/malam</small></span>
+                    </div>
+                    <div class="room-details">
+                        <h3 class="room-name">Suite Room</h3>
+                        <p class="room-desc lang-id">Tingkat kemewahan tertinggi dengan ruang keluarga terpisah, balkon pribadi berpemandangan pegunungan asri, bathtub premium, dan layanan VIP eksklusif.</p>
+                        <p class="room-desc lang-en">The ultimate level of luxury featuring a separate family living room, private balcony with scenic mountain views, premium bathtub, and exclusive VIP service.</p>
+                        <ul class="room-features">
+                            <li><i class="fa-solid fa-arrows-left-right"></i> 54 m²</li>
+                            <li><i class="fa-solid fa-bed"></i> <span class="lang-id">1 Ranjang King Premium</span><span class="lang-en">1 Premium King Bed</span></li>
+                            <li><i class="fa-solid fa-users"></i> <span class="lang-id">2 Dewasa</span><span class="lang-en">2 Adults</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span class="lang-id">Sarapan Gratis</span><span class="lang-en">Free Breakfast</span></li>
+                        </ul>
+                        <div class="room-card-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openRoomModal('Suite')"><span class="lang-id">Detail Kamar</span><span class="lang-en">Room Details</span></button>
+                            <button class="btn btn-primary btn-sm" onclick="bookRoomRedirect('Suite')"><span class="lang-id">Pesan</span><span class="lang-en">Book</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Glamping -->
+                <div class="room-card" data-room-type="Glamping">
+                    <div class="room-img-container">
+                        <img src="images/rooms/glamping.jpg" data-fallback="https://ak-d.tripcdn.com/images/0581712000sqpqhuxAFD6_W_405_540_R5.webp?auto=format&fit=crop&w=800&q=80" alt="Augusta Glamping Room" class="room-img" loading="lazy">
+                        <span class="room-price-badge">Rp 950.000<small>/malam</small></span>
+                    </div>
+                    <div class="room-details">
+                        <h3 class="room-name">Glamping Room</h3>
+                        <p class="room-desc lang-id">Nikmati pengalaman menginap unik menyatu dengan alam melalui konsep kemah mewah (Glamorous Camping) yang dilengkapi fasilitas kenyamanan hotel berbintang.</p>
+                        <p class="room-desc lang-en">Enjoy a unique stay experience merging with nature through a glamorous camping concept completed with star-hotel amenities.</p>
+                        <ul class="room-features">
+                            <li><i class="fa-solid fa-arrows-left-right"></i> 36 m²</li>
+                            <li><i class="fa-solid fa-bed"></i> <span class="lang-id">1 Ranjang Queen</span><span class="lang-en">1 Queen Bed</span></li>
+                            <li><i class="fa-solid fa-users"></i> <span class="lang-id">2 Dewasa</span><span class="lang-en">2 Adults</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span class="lang-id">Teras & Hammock</span><span class="lang-en">Terrace & Hammock</span></li>
+                        </ul>
+                        <div class="room-card-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openRoomModal('Glamping')"><span class="lang-id">Detail Kamar</span><span class="lang-en">Room Details</span></button>
+                            <button class="btn btn-primary btn-sm" onclick="bookRoomRedirect('Glamping')"><span class="lang-id">Pesan</span><span class="lang-en">Book</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. VIP -->
+                <div class="room-card" data-room-type="VIP">
+                    <div class="room-img-container">
+                        <img src="images/rooms/vip.jpg" data-fallback="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Augusta VIP Room" class="room-img" loading="lazy">
+                        <span class="room-price-badge">Rp 850.000<small>/malam</small></span>
+                    </div>
+                    <div class="room-details">
+                        <h3 class="room-name">VIP Room</h3>
+                        <p class="room-desc lang-id">Kamar eksklusif yang tenang dengan desain interior modern berkelas, kasur king-size berkualitas tinggi, perlengkapan mandi premium, dan akses privat.</p>
+                        <p class="room-desc lang-en">Quiet exclusive room with elegant modern interiors, premium high-quality king-size mattress, luxurious bath amenities, and private access.</p>
+                        <ul class="room-features">
+                            <li><i class="fa-solid fa-arrows-left-right"></i> 42 m²</li>
+                            <li><i class="fa-solid fa-bed"></i> <span class="lang-id">1 Ranjang King</span><span class="lang-en">1 King Bed</span></li>
+                            <li><i class="fa-solid fa-users"></i> <span class="lang-id">2 Dewasa</span><span class="lang-en">2 Adults</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span class="lang-id">Smart TV & Sofa</span><span class="lang-en">Smart TV & Sofa</span></li>
+                        </ul>
+                        <div class="room-card-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openRoomModal('VIP')"><span class="lang-id">Detail Kamar</span><span class="lang-en">Room Details</span></button>
+                            <button class="btn btn-primary btn-sm" onclick="bookRoomRedirect('VIP')"><span class="lang-id">Pesan</span><span class="lang-en">Book</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Deluxe 1 -->
+                <div class="room-card" data-room-type="Deluxe 1">
+                    <div class="room-img-container">
+                        <img src="images/rooms/deluxe1.jpg" data-fallback="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80" alt="Augusta Deluxe 1" class="room-img" loading="lazy">
+                        <span class="room-price-badge">Rp 700.000<small>/malam</small></span>
+                    </div>
+                    <div class="room-details">
+                        <h3 class="room-name">Deluxe 1 (King Bed)</h3>
+                        <p class="room-desc lang-id">Kamar Deluxe premium berukuran luas dengan 1 ranjang besar (King Size) dan teras pribadi yang menghadap langsung ke taman tropis hotel yang asri.</p>
+                        <p class="room-desc lang-en">Spacious premium deluxe room with 1 large King-size bed and a private balcony directly facing the lush tropical garden.</p>
+                        <ul class="room-features">
+                            <li><i class="fa-solid fa-arrows-left-right"></i> 32 m²</li>
+                            <li><i class="fa-solid fa-bed"></i> <span class="lang-id">1 Ranjang King</span><span class="lang-en">1 King Bed</span></li>
+                            <li><i class="fa-solid fa-users"></i> <span class="lang-id">2 Dewasa</span><span class="lang-en">2 Adults</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span class="lang-id">Teras Taman</span><span class="lang-en">Garden Terrace</span></li>
+                        </ul>
+                        <div class="room-card-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openRoomModal('Deluxe 1')"><span class="lang-id">Detail Kamar</span><span class="lang-en">Room Details</span></button>
+                            <button class="btn btn-primary btn-sm" onclick="bookRoomRedirect('Deluxe 1')"><span class="lang-id">Pesan</span><span class="lang-en">Book</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Deluxe 2 -->
+                <div class="room-card" data-room-type="Deluxe 2">
+                    <div class="room-img-container">
+                        <img src="images/rooms/deluxe2.jpg" data-fallback="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="Augusta Deluxe 2" class="room-img" loading="lazy">
+                        <span class="room-price-badge">Rp 650.000<small>/malam</small></span>
+                    </div>
+                    <div class="room-details">
+                        <h3 class="room-name">Deluxe 2 (Twin Bed)</h3>
+                        <p class="room-desc lang-id">Kamar Deluxe yang nyaman dengan 2 ranjang single (Twin Beds) terpisah dan pemandangan segar ke area kolam renang utama hotel.</p>
+                        <p class="room-desc lang-en">Cozy Deluxe room containing 2 separate Twin beds with refreshing window views overlooking the main pool area.</p>
+                        <ul class="room-features">
+                            <li><i class="fa-solid fa-arrows-left-right"></i> 32 m²</li>
+                            <li><i class="fa-solid fa-bed"></i> <span class="lang-id">2 Ranjang Twin</span><span class="lang-en">2 Twin Beds</span></li>
+                            <li><i class="fa-solid fa-users"></i> <span class="lang-id">2 Dewasa</span><span class="lang-en">2 Adults</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span class="lang-id">Pemandangan Kolam</span><span class="lang-en">Poolside Views</span></li>
+                        </ul>
+                        <div class="room-card-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openRoomModal('Deluxe 2')"><span class="lang-id">Detail Kamar</span><span class="lang-en">Room Details</span></button>
+                            <button class="btn btn-primary btn-sm" onclick="bookRoomRedirect('Deluxe 2')"><span class="lang-id">Pesan</span><span class="lang-en">Book</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Superior -->
+                <div class="room-card" data-room-type="Superior">
+                    <div class="room-img-container">
+                        <img src="images/rooms/superior.jpg" data-fallback="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80" alt="Augusta Superior Room" class="room-img" loading="lazy">
+                        <span class="room-price-badge">Rp 550.000<small>/malam</small></span>
+                    </div>
+                    <div class="room-details">
+                        <h3 class="room-name">Superior Room</h3>
+                        <p class="room-desc lang-id">Pilihan akomodasi kelas menengah yang menawarkan kehangatan tata ruang modern dengan fasilitas lengkap dan harga yang sangat bersahabat.</p>
+                        <p class="room-desc lang-en">Mid-tier accommodation choice offering warm modern layouts with comprehensive amenities and a very friendly pricing.</p>
+                        <ul class="room-features">
+                            <li><i class="fa-solid fa-arrows-left-right"></i> 28 m²</li>
+                            <li><i class="fa-solid fa-bed"></i> <span class="lang-id">1 Ranjang Queen</span><span class="lang-en">1 Queen Bed</span></li>
+                            <li><i class="fa-solid fa-users"></i> <span class="lang-id">2 Dewasa</span><span class="lang-en">2 Adults</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span class="lang-id">Wi-Fi Cepat</span><span class="lang-en">Fast Wi-Fi</span></li>
+                        </ul>
+                        <div class="room-card-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openRoomModal('Superior')"><span class="lang-id">Detail Kamar</span><span class="lang-en">Room Details</span></button>
+                            <button class="btn btn-primary btn-sm" onclick="bookRoomRedirect('Superior')"><span class="lang-id">Pesan</span><span class="lang-en">Book</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Standard -->
+                <div class="room-card" data-room-type="Standard">
+                    <div class="room-img-container">
+                        <img src="images/rooms/standard.jpg" data-fallback="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=80" alt="Augusta Standard Room" class="room-img" loading="lazy">
+                        <span class="room-price-badge">Rp 425.000<small>/malam</small></span>
+                    </div>
+                    <div class="room-details">
+                        <h3 class="room-name">Standard Room</h3>
+                        <p class="room-desc lang-id">Pilihan hemat terbaik untuk pelancong bisnis mandiri maupun transit keluarga yang mengutamakan kebersihan, kerapian, dan fungsi esensial.</p>
+                        <p class="room-desc lang-en">Best economical choice for solo business travelers or family transits prioritizing hygiene, neatness, and essential comfort.</p>
+                        <ul class="room-features">
+                            <li><i class="fa-solid fa-arrows-left-right"></i> 22 m²</li>
+                            <li><i class="fa-solid fa-bed"></i> <span class="lang-id">1 Ranjang Double</span><span class="lang-en">1 Double Bed</span></li>
+                            <li><i class="fa-solid fa-users"></i> <span class="lang-id">1-2 Dewasa</span><span class="lang-en">1-2 Adults</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span class="lang-id">AC & Pancuran</span><span class="lang-en">AC & Shower</span></li>
+                        </ul>
+                        <div class="room-card-actions">
+                            <button class="btn btn-outline btn-sm" onclick="openRoomModal('Standard')"><span class="lang-id">Detail Kamar</span><span class="lang-en">Room Details</span></button>
+                            <button class="btn btn-primary btn-sm" onclick="bookRoomRedirect('Standard')"><span class="lang-id">Pesan</span><span class="lang-en">Book</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Universal Details Modal -->
+    <div id="room-detail-modal" class="modal-overlay" onclick="closeRoomModalOutside(event)">
+        <div class="modal-container">
+            <button class="modal-close-btn" onclick="closeRoomModal()">&times;</button>
+            <div class="modal-content-grid">
+                <div class="modal-image-panel">
+                    <img id="modal-room-image" src="" alt="Kamar Augusta">
+                </div>
+                <div class="modal-info-panel">
+                    <span class="modal-room-tag"><span class="lang-id">Spesifikasi Kamar</span><span class="lang-en">Room Specifications</span></span>
+                    <h3 id="modal-room-title">Nama Kamar</h3>
+                    <div class="modal-room-price" id="modal-room-price">Rp 0</div>
+                    <p id="modal-room-description" class="modal-room-desc">Deskripsi</p>
+                    
+                    <h4><span class="lang-id">Fasilitas Kamar:</span><span class="lang-en">In-Room Amenities:</span></h4>
+                    <ul class="modal-amenities-list" id="modal-amenities-list"></ul>
+
+                    <div class="modal-booking-actions">
+                        <button class="btn btn-primary" id="modal-book-btn"><span class="lang-id">Pesan Kamar Ini</span><span class="lang-en">Book This Room</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-column">
+                <img src="images/Augusta Sukabumi.png" data-fallback="images/Augusta Sukabumi.png" alt="Augusta Hotel Logo" class="hotel-logo-img">
+                <p class="footer-about-text">
+                    <span class="lang-id">Akomodasi resort dan konvensi terintegrasi terkemuka di Sukabumi. Memadukan kenyamanan fasilitas modern dengan nuansa alam pegunungan yang menyejukkan hati.</span>
+                    <span class="lang-en">A leading integrated resort and convention accommodation in Sukabumi. Blending modern facility comforts with a soothing mountain nature vibe.</span>
+                </p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/augustacikukulu/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/6285795441992" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links-column">
+                <h3>Navigasi</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Beranda</span><span class="lang-en">Home</span></a></li>
+                    <li><a href="rooms.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Tipe Kamar</span><span class="lang-en">Room Tiers</span></a></li>
+                    <li><a href="facilities.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Fasilitas Resort</span><span class="lang-en">Resort Facilities</span></a></li>
+                    <li><a href="restaurant.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Menu Restoran</span><span class="lang-en">Restaurant Menu</span></a></li>
+                    <li><a href="booking.html#paket"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Paket Augusta</span><span class="lang-en">Special Packages</span></a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Tentang Kami</span><span class="lang-en">About Us</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="footer-contact-column">
+                <h3>Hubungi Kami</h3>
+                <ul class="footer-contact-info">
+                    <li>
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <span>Jl. Raya Cikukulu No.72, Cisande, Kec. Cicantayan, Kabupaten Sukabumi, Jawa Barat 43155</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>0857 9544 1992</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-instagram"></i>
+                        <span><a href="https://www.instagram.com/augustacikukulu/" target="_blank" class="footer-link-highlight">@augustacikukulu</a></span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span><a href="https://wa.me/6285795441992" target="_blank" class="footer-link-highlight">Chat WhatsApp Reservasi</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom text-center">
+            <div class="container">
+                <p>&copy; 2026 Augusta Hotel & Resort Sukabumi. <span class="lang-id">Seluruh hak cipta dilindungi undang-undang.</span><span class="lang-en">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+    
+    <!-- Special JS call for active query parsing in rooms.html -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const room = urlParams.get('room');
+            if (room) {
+                // Pre-open the requested room modal
+                openRoomModal(room);
+            }
+        });
+    </script>
+</body>
+</html>

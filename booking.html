@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservasi & Paket - Augusta Hotel & Resort</title>
+    <meta name="description" content="Gunakan kalkulator estimasi biaya untuk menghitung harga menginap di Augusta Hotel Sukabumi dan kirim pemesanan langsung lewat WhatsApp secara cepat.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M25,30 C35,30 45,30 45,45 C45,60 35,60 25,60 C15,60 15,45 15,45 C15,30 25,30 Z M75,30 C65,30 55,30 55,45 C55,60 65,60 75,60 C85,60 85,45 85,45 C85,30 75,30 Z' fill='%23E43F15'/%3E%3C/svg%3E">
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem('augusta-lang');
+            if (savedLang === 'en') {
+                document.documentElement.classList.add('lang-en-active');
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info-left">
+                <span><i class="fa-solid fa-location-dot"></i> Jl. Raya Cikukulu No.72, Sukabumi</span>
+                <span class="separator">|</span>
+                <span><i class="fa-solid fa-phone"></i> 0857 9544 1992</span>
+            </div>
+            <div class="top-info-right">
+                <a href="https://www.instagram.com/augustacikukulu/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/6285795441992" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Header & Navbar -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-container" aria-label="Augusta Hotel Home">
+                <img src="images/Augusta Sukabumi.png" data-fallback="images/Augusta-Sukabumi.png" alt="Augusta Hotel Logo" class="hotel-logo-img">
+            </a>
+
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav id="primary-navigation" class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><span class="lang-id">Beranda</span><span class="lang-en">Home</span></a></li>
+                    <li class="nav-item dropdown">
+                        <a href="rooms.html" class="nav-link dropdown-toggle"><span class="lang-id">Room</span><span class="lang-en">Room</span> <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="rooms.html?room=Suite">Suite Room</a></li>
+                            <li><a href="rooms.html?room=Glamping">Glamping Room</a></li>
+                            <li><a href="rooms.html?room=VIP">VIP Room</a></li>
+                            <li><a href="rooms.html?room=Deluxe 1">Deluxe 1</a></li>
+                            <li><a href="rooms.html?room=Deluxe 2">Deluxe 2</a></li>
+                            <li><a href="rooms.html?room=Superior">Superior Room</a></li>
+                            <li><a href="rooms.html?room=Standard">Standard Room</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="facilities.html" class="nav-link"><span class="lang-id">Fasilitas</span><span class="lang-en">Facilities</span></a></li>
+                    <li class="nav-item"><a href="restaurant.html" class="nav-link"><span class="lang-id">Menu Restoran</span><span class="lang-en">Restaurant</span></a></li>
+                    <li class="nav-item"><a href="booking.html#paket" class="nav-link active"><span class="lang-id">Paket Augusta</span><span class="lang-en">Packages</span></a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link"><span class="lang-id">Tentang Kami</span><span class="lang-en">About Us</span></a></li>
+                </ul>
+                
+                <!-- Language Switcher -->
+                <div class="nav-controls">
+                    <button class="lang-toggle-btn" onclick="toggleLanguage()" aria-label="Toggle Language">
+                        <span class="lang-id">EN</span>
+                        <span class="lang-en">ID</span>
+                    </button>
+                </div>
+                
+                <a href="booking.html" class="btn btn-primary nav-cta active"><span class="lang-id">Pesan Sekarang</span><span class="lang-en">Book Now</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header Banner -->
+    <section class="page-header-banner" style="background-image: linear-gradient(rgba(28, 43, 31, 0.6), rgba(28, 43, 31, 0.8)), url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1920&q=80');">
+        <div class="container">
+            <h1><span class="lang-id">Reservasi & Paket Augusta</span><span class="lang-en">Reservations & Packages</span></h1>
+            <p><span class="lang-id">Kalkulator estimasi biaya menginap transparan terintegrasi langsung dengan WhatsApp</span><span class="lang-en">Transparent booking cost calculator integrated directly with WhatsApp</span></p>
+        </div>
+    </section>
+
+    <!-- Section 1: Special Packages (Paket Augusta) -->
+    <section class="packages-section section-padding bg-light" id="paket">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag"><span class="lang-id">Layanan & Paket</span><span class="lang-en">Services & Packages</span></span>
+                <h2 class="section-title"><span class="lang-id">Pilihan Paket Khusus Augusta</span><span class="lang-en">Augusta Special Packages</span></h2>
+                <p class="section-subtitle">
+                    <span class="lang-id">Dapatkan penawaran harga paket terbaik kami yang dirancang khusus secara komprehensif untuk menunjang kelancaran momen berharga Anda.</span>
+                    <span class="lang-en">Get our best special packages comprehensively tailored to ensure the success of your precious moments.</span>
+                </p>
+            </div>
+
+            <!-- Packages Grid -->
+            <div class="packages-grid">
+                <!-- Wedding Package -->
+                <div class="package-card animate-hover">
+                    <div class="package-icon-container"><i class="fa-solid fa-heart"></i></div>
+                    <h3 class="package-title"><span class="lang-id">Paket Pernikahan (Wedding)</span><span class="lang-en">Wedding Package</span></h3>
+                    <p class="package-subtitle"><span class="lang-id">Mulai dari</span><span class="lang-en">Starting from</span> <strong>Rp 15.000.000</strong></p>
+                    <p class="package-desc">
+                        <span class="lang-id">Wujudkan pernikahan impian Anda dengan latar belakang alam yang indah atau di dalam Grand Ballroom mewah bersama tim perencana pernikahan kami.</span>
+                        <span class="lang-en">Realize your dream wedding with beautiful nature backdrops or inside our luxurious Grand Ballroom with our planning team.</span>
+                    </p>
+                    <ul class="package-inclusions">
+                        <li><i class="fa-solid fa-circle-check text-accent"></i> <span class="lang-id">Sewa Ballroom / Area Kebun 5 jam</span><span class="lang-en">5-hour Ballroom / Garden Area rental</span></li>
+                        <li><i class="fa-solid fa-circle-check text-accent"></i> <span class="lang-id">Katering Prasmanan untuk 200 Porsi</span><span class="lang-en">Buffet Catering for 200 Portions</span></li>
+                        <li><i class="fa-solid fa-circle-check text-accent"></i> <span class="lang-id">Dekorasi Pelaminan Standar Cantik</span><span class="lang-en">Beautiful Standard stage decorations</span></li>
+                        <li><i class="fa-solid fa-circle-check text-accent"></i> <span class="lang-id">Gratis 1 Malam di Suite Room</span><span class="lang-en">1 Complimentary Night in Suite Room</span></li>
+                    </ul>
+                    <a href="https://wa.me/6285795441992?text=Halo%20Augusta%20Hotel,%20saya%20tertarik%20dengan%20Paket%20Pernikahan%20(Wedding)." target="_blank" class="btn btn-outline btn-block"><span class="lang-id">Hubungi Kami</span><span class="lang-en">Contact Us</span></a>
+                </div>
+
+                <!-- Convention / Meeting Package -->
+                <div class="package-card animate-hover">
+                    <div class="package-icon-container"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3 class="package-title"><span class="lang-id">Paket Rapat & Konvensi</span><span class="lang-en">Meeting & Convention</span></h3>
+                    <p class="package-subtitle"><span class="lang-id">Mulai dari</span><span class="lang-en">Starting from</span> <strong>Rp 150.000</strong> / Pax</p>
+                    <p class="package-desc">
+                        <span class="lang-id">Fasilitasi kelancaran agenda pertemuan bisnis, rapat koordinasi, atau seminar korporat Anda dengan sarana rapat berteknologi lengkap.</span>
+                        <span class="lang-en">Facilitate smooth business meetings, coordination sessions, or corporate seminars with fully equipped meeting amenities.</span>
+                    </p>
+                    <ul class="package-inclusions">
+                        <li><i class="fa-solid fa-circle-check text-accent"></i> <span class="lang-id">Sewa Ruang Rapat full AC</span><span class="lang-en">Air-conditioned Meeting Room rental</span></li>
+                        <li><i class="fa-solid fa-circle-check text-accent"></i> <span class="lang-id">Proyektor LCD & Papan Tulis</span><span class="lang-en">LCD Projector & Whiteboard systems</span></li>
+                        <li><i class="fa-solid fa-circle-check text-accent"></i> <span class="lang-id">2x Coffee Break & 1x Makan Besar</span><span class="lang-en">2x Coffee Breaks & 1x Main Meal</span></li>
+                        <li><i class="fa-solid fa-circle-check text-accent"></i> <span class="lang-id">Sound system & Wi-Fi khusus</span><span class="lang-en">Dedicated Sound system & Wi-Fi</span></li>
+                    </ul>
+                    <a href="https://wa.me/6285795441992?text=Halo%20Augusta%20Hotel,%20saya%20tertarik%20dengan%20Paket%20Rapat%20dan%20Konvensi." target="_blank" class="btn btn-outline btn-block"><span class="lang-id">Hubungi Kami</span><span class="lang-en">Contact Us</span></a>
+                </div>
+
+                <!-- Family Outing / Gathering Package -->
+                <div class="package-card animate-hover">
+                    <div class="package-icon-container"><i class="fa-solid fa-people-group"></i></div>
+                    <h3 class="package-title"><span class="lang-id">Outing & Family Gathering</span><span class="lang-en">Outing & Family Gathering</span></h3>
+                    <p class="package-subtitle"><span class="lang-id">Mulai dari</span><span class="lang-en">Starting from</span> <strong>Rp 250.000</strong> / Pax</p>
+                    <p class="package-desc">
+                        <span class="lang-id">Pererat keakraban keluarga besar atau rekan kerja perusahaan melalui serangkaian kegiatan fun games luar ruang di area hijau resort kami.</span>
+                        <span class="lang-en">Strengthen bonds between family or colleagues through outdoor fun games in our green resort fields.</span>
+                    </p>
+                    <ul class="package-inclusions">
+                        <li><i class="fa-solid fa-circle-check text-accent"></i> <span class="lang-id">Fasilitator Outbound Berpengalaman</span><span class="lang-en">Experienced Outbound facilitators</span></li>
+                        <li><i class="fa-solid fa-circle-check text-accent"></i> <span class="lang-id">Fun Games & Perlengkapan Acara</span><span class="lang-en">Fun Games & Event equipment setup</span></li>
+                        <li><i class="fa-solid fa-circle-check text-accent"></i> <span class="lang-id">Makan Siang Bersama Prasmanan</span><span class="lang-en">Shared Buffet Lunch catering</span></li>
+                        <li><i class="fa-solid fa-circle-check text-accent"></i> <span class="lang-id">Bebas Akses Kolam Renang Resort</span><span class="lang-en">Free access to the Resort Pool</span></li>
+                    </ul>
+                    <a href="https://wa.me/6285795441992?text=Halo%20Augusta%20Hotel,%20saya%20tertarik%20dengan%20Paket%20Outing%20dan%20Family%20Gathering." target="_blank" class="btn btn-outline btn-block"><span class="lang-id">Hubungi Kami</span><span class="lang-en">Contact Us</span></a>
+                </div>
+
+                <!-- Honeymoon Package -->
+                <div class="package-card animate-hover">
+                    <div class="package-icon-container"><i class="fa-solid fa-champagne-glasses"></i></div>
+                    <h3 class="package-title"><span class="lang-id">Paket Bulan Madu (Honeymoon)</span><span class="lang-en">Honeymoon Package</span></h3>
+                    <p class="package-subtitle"><span class="lang-id">Mulai dari</span><span class="lang-en">Starting from</span> <strong>Rp 1.800.000</strong></p>
+                    <p class="package-desc">
+                        <span class="lang-id">Ciptakan kenangan romantis yang tak terlupakan bersama pasangan dalam suasana alam kaki gunung Sukabumi yang sejuk dan tenang.</span>
+                        <span class="lang-en">Create unforgettable romantic memories with your partner in Sukabumi's cool and quiet mountain climate.</span>
+                    </p>
+                    <ul class="package-inclusions">
+                        <li><i class="fa-solid fa-circle-check text-accent"></i> <span class="lang-id">2 Malam di Glamping / VIP Room</span><span class="lang-en">2 Nights in Glamping / VIP Room</span></li>
+                        <li><i class="fa-solid fa-circle-check text-accent"></i> <span class="lang-id">Dekorasi Kamar Romantis & Bunga</span><span class="lang-en">Romantic room setups with flowers</span></li>
+                        <li><i class="fa-solid fa-circle-check text-accent"></i> <span class="lang-id">1x Candlelight Dinner Romantis</span><span class="lang-en">1x Romantic Candlelight Dinner</span></li>
+                        <li><i class="fa-solid fa-circle-check text-accent"></i> <span class="lang-id">Sarapan Pagi diantarkan ke Kamar</span><span class="lang-en">Special Breakfast served in-room</span></li>
+                    </ul>
+                    <a href="https://wa.me/6285795441992?text=Halo%20Augusta%20Hotel,%20saya%20tertarik%20dengan%20Paket%20Bulan%20Madu%20(Honeymoon)." target="_blank" class="btn btn-outline btn-block"><span class="lang-id">Hubungi Kami</span><span class="lang-en">Contact Us</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: WhatsApp Booking & Estimator -->
+    <section class="booking-section section-padding text-white" id="booking">
+        <div class="container">
+            <div class="booking-grid">
+                
+                <!-- Booking Info & Calculator -->
+                <div class="booking-info-panel">
+                    <span class="section-tag-light"><span class="lang-id">Reservasi Praktis</span><span class="lang-en">Easy Reservation</span></span>
+                    <h2>
+                        <span class="lang-id">Kalkulator Estimasi & Pemesanan Kamar</span>
+                        <span class="lang-en">Estimated Cost & Booking Calculator</span>
+                    </h2>
+                    <p>
+                        <span class="lang-id">Gunakan kalkulator di bawah ini untuk melihat rincian biaya menginap secara transparan. Klik kirim untuk mengirim data pemesanan secara otomatis ke admin reservasi via WhatsApp resmi kami.</span>
+                        <span class="lang-en">Use the calculator below to view a transparent billing breakdown of your stay. Click submit to automatically send your reservation details to our admin via our official WhatsApp chat.</span>
+                    </p>
+                    
+                    <!-- Billing Receipt Card -->
+                    <div class="price-breakdown-card" id="price-breakdown">
+                        <h3><span class="lang-id">Detail Estimasi Pemesanan</span><span class="lang-en">Estimated Booking Details</span></h3>
+                        
+                        <div class="breakdown-row">
+                            <span><span class="lang-id">Tipe Kamar:</span><span class="lang-en">Room Type:</span></span>
+                            <span id="breakdown-room-type">-</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span><span class="lang-id">Tarif / Malam:</span><span class="lang-en">Rate / Night:</span></span>
+                            <span id="breakdown-room-rate">Rp 0</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span><span class="lang-id">Durasi Menginap:</span><span class="lang-en">Duration of Stay:</span></span>
+                            <span id="breakdown-nights">0 Malam</span>
+                        </div>
+                        <div class="breakdown-row subtotal-row">
+                            <span><span class="lang-id">Subtotal Kamar:</span><span class="lang-en">Room Subtotal:</span></span>
+                            <span id="breakdown-subtotal">Rp 0</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span><span class="lang-id">PPN (11%):</span><span class="lang-en">Taxes (PPN 11%):</span></span>
+                            <span id="breakdown-tax">Rp 0</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span><span class="lang-id">Biaya Servis (5%):</span><span class="lang-en">Service Charge (5%):</span></span>
+                            <span id="breakdown-service">Rp 0</span>
+                        </div>
+                        <hr class="breakdown-divider">
+                        <div class="breakdown-row total-row">
+                            <span><span class="lang-id">Total Estimasi:</span><span class="lang-en">Grand Total:</span></span>
+                            <span id="breakdown-total">Rp 0</span>
+                        </div>
+                        <p class="breakdown-note">
+                            <span class="lang-id">*Estimasi harga belum termasuk diskon promo musiman jika tersedia.</span>
+                            <span class="lang-en">*Pricing estimate does not include seasonal discount promos if available.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <div class="booking-form-panel">
+                    <form id="whatsapp-booking-form" onsubmit="submitToWhatsApp(event)">
+                        <h3 class="form-title"><span class="lang-id">Formulir Pemesanan</span><span class="lang-en">Reservation Form</span></h3>
+                        
+                        <div class="form-group">
+                            <label for="booking-name"><i class="fa-solid fa-user"></i> <span class="lang-id">Nama Lengkap</span><span class="lang-en">Full Name</span></label>
+                            <input type="text" id="booking-name" placeholder="Contoh: Ahmad Fauzi" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="booking-phone"><i class="fa-solid fa-phone"></i> <span class="lang-id">Nomor WhatsApp Aktif</span><span class="lang-en">Active WhatsApp Number</span></label>
+                            <input type="tel" id="booking-phone" placeholder="Contoh: 08123456789" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="booking-room"><i class="fa-solid fa-bed"></i> <span class="lang-id">Tipe Kamar</span><span class="lang-en">Room Type</span></label>
+                                <select id="booking-room" onchange="updateBookingCalculation()" required>
+                                    <option value="Suite" data-price="1250000">Suite Room (Rp 1.250.000)</option>
+                                    <option value="Glamping" data-price="950000">Glamping Room (Rp 950.000)</option>
+                                    <option value="VIP" data-price="850000">VIP Room (Rp 850.000)</option>
+                                    <option value="Deluxe 1" data-price="700000">Deluxe 1 (Rp 700.000)</option>
+                                    <option value="Deluxe 2" data-price="650000">Deluxe 2 (Rp 650.000)</option>
+                                    <option value="Superior" data-price="550000" selected>Superior Room (Rp 550.000)</option>
+                                    <option value="Standard" data-price="425000">Standard Room (Rp 425.000)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="booking-guests"><i class="fa-solid fa-users"></i> <span class="lang-id">Jumlah Tamu</span><span class="lang-en">Total Guests</span></label>
+                                <select id="booking-guests">
+                                    <option value="1 Dewasa">1 <span class="lang-id">Dewasa</span><span class="lang-en">Adult</span></option>
+                                    <option value="2 Dewasa" selected>2 <span class="lang-id">Dewasa</span><span class="lang-en">Adults</span></option>
+                                    <option value="2 Dewasa & 1 Anak">2 <span class="lang-id">Dewasa & 1 Anak</span><span class="lang-en">Adults & 1 Child</span></option>
+                                    <option value="2 Dewasa & 2 Anak">2 <span class="lang-id">Dewasa & 2 Anak</span><span class="lang-en">Adults & 2 Children</span></option>
+                                    <option value="3+ Dewasa"><span class="lang-id">Rombongan (3+ Dewasa)</span><span class="lang-en">Group (3+ Adults)</span></option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="booking-checkin"><i class="fa-regular fa-calendar-check"></i> Check-in</label>
+                                <input type="date" id="booking-checkin" onchange="updateBookingCalculation()" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="booking-checkout"><i class="fa-regular fa-calendar-times"></i> Check-out</label>
+                                <input type="date" id="booking-checkout" onchange="updateBookingCalculation()" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="booking-notes"><i class="fa-regular fa-comment-dots"></i> <span class="lang-id">Permintaan Khusus (Opsional)</span><span class="lang-en">Special Requests (Optional)</span></label>
+                            <textarea id="booking-notes" rows="3" placeholder="Contoh: Kamar bebas asap rokok, dekat kolam renang, extra bed, dll."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-accent btn-block btn-lg">
+                            <i class="fa-brands fa-whatsapp"></i> 
+                            <span class="lang-id">Hubungi Admin & Pesan</span><span class="lang-en">Contact Admin & Book</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-column">
+                <img src="images/Augusta Sukabumi.png" data-fallback="images/Augusta Sukabumi.png" alt="Augusta Hotel Logo" class="hotel-logo-img">
+                <p class="footer-about-text">
+                    <span class="lang-id">Akomodasi resort dan konvensi terintegrasi terkemuka di Sukabumi. Memadukan kenyamanan fasilitas modern dengan nuansa alam pegunungan yang menyejukkan hati.</span>
+                    <span class="lang-en">A leading integrated resort and convention accommodation in Sukabumi. Blending modern facility comforts with a soothing mountain nature vibe.</span>
+                </p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/augustacikukulu/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/6285795441992" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links-column">
+                <h3>Navigasi</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Beranda</span><span class="lang-en">Home</span></a></li>
+                    <li><a href="rooms.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Tipe Kamar</span><span class="lang-en">Room Tiers</span></a></li>
+                    <li><a href="facilities.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Fasilitas Resort</span><span class="lang-en">Resort Facilities</span></a></li>
+                    <li><a href="restaurant.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Menu Restoran</span><span class="lang-en">Restaurant Menu</span></a></li>
+                    <li><a href="booking.html#paket"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Paket Augusta</span><span class="lang-en">Special Packages</span></a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Tentang Kami</span><span class="lang-en">About Us</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="footer-contact-column">
+                <h3>Hubungi Kami</h3>
+                <ul class="footer-contact-info">
+                    <li>
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <span>Jl. Raya Cikukulu No.72, Cisande, Kec. Cicantayan, Kabupaten Sukabumi, Jawa Barat 43155</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>0857 9544 1992</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-instagram"></i>
+                        <span><a href="https://www.instagram.com/augustacikukulu/" target="_blank" class="footer-link-highlight">@augustacikukulu</a></span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span><a href="https://wa.me/6285795441992" target="_blank" class="footer-link-highlight">Chat WhatsApp Reservasi</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom text-center">
+            <div class="container">
+                <p>&copy; 2026 Augusta Hotel & Resort Sukabumi. <span class="lang-id">Seluruh hak cipta dilindungi undang-undang.</span><span class="lang-en">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+</body>
+</html>

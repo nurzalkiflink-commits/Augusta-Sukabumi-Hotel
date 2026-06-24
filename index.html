@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augusta Hotel, Restaurant, Convention & Resort Sukabumi</title>
+    <meta name="description" content="Selamat datang di Augusta Hotel & Resort Sukabumi. Nikmati penginapan nyaman dengan 7 tipe kamar, fasilitas lengkap (kolam renang, ballroom, tennis court, driving range), dan restoran khas. Hubungi kami untuk reservasi mudah.">
+    <meta name="keywords" content="augusta hotel, hotel sukabumi, resort sukabumi, augusta cikukulu, convention hall sukabumi, glamping sukabumi, hotel murah sukabumi">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M25,30 C35,30 45,30 45,45 C45,60 35,60 25,60 C15,60 15,45 15,45 C15,30 25,30 Z M75,30 C65,30 55,30 55,45 C55,60 65,60 75,60 C85,60 85,45 85,45 C85,30 75,30 Z' fill='%23E43F15'/%3E%3C/svg%3E">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Inline script to apply theme instantly to prevent light flash -->
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem('augusta-lang');
+            if (savedLang === 'en') {
+                document.documentElement.classList.add('lang-en-active');
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info-left">
+                <span><i class="fa-solid fa-location-dot"></i> Jl. Raya Cikukulu No.72, Sukabumi</span>
+                <span class="separator">|</span>
+                <span><i class="fa-solid fa-phone"></i> 0857 9544 1992</span>
+            </div>
+            <div class="top-info-right">
+                <a href="https://www.instagram.com/augustacikukulu/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/6285795441992" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Header & Navbar -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-container" aria-label="Augusta Hotel Home">
+                <!-- SVG Augusta Logo -->
+                <img src="images/Augusta Sukabumi.png" data-fallback="images/Augusta-Sukabumi.png" alt="Augusta Hotel Logo" class="hotel-logo-img">
+            </a>
+
+            <!-- Mobile Navigation Toggle -->
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav id="primary-navigation" class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link active"><span class="lang-id">Beranda</span><span class="lang-en">Home</span></a></li>
+                    <li class="nav-item dropdown">
+                        <a href="rooms.html" class="nav-link dropdown-toggle"><span class="lang-id">Room</span><span class="lang-en">Room</span> <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="rooms.html?room=Suite">Suite Room</a></li>
+                            <li><a href="rooms.html?room=Glamping">Glamping Room</a></li>
+                            <li><a href="rooms.html?room=VIP">VIP Room</a></li>
+                            <li><a href="rooms.html?room=Deluxe 1">Deluxe 1</a></li>
+                            <li><a href="rooms.html?room=Deluxe 2">Deluxe 2</a></li>
+                            <li><a href="rooms.html?room=Superior">Superior Room</a></li>
+                            <li><a href="rooms.html?room=Standard">Standard Room</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="facilities.html" class="nav-link"><span class="lang-id">Fasilitas</span><span class="lang-en">Facilities</span></a></li>
+                    <li class="nav-item"><a href="restaurant.html" class="nav-link"><span class="lang-id">Menu Restoran</span><span class="lang-en">Restaurant</span></a></li>
+                    <li class="nav-item"><a href="booking.html#paket" class="nav-link"><span class="lang-id">Paket Augusta</span><span class="lang-en">Packages</span></a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link"><span class="lang-id">Tentang Kami</span><span class="lang-en">About Us</span></a></li>
+                </ul>
+                
+                <!-- Language Switcher -->
+                <div class="nav-controls">
+                    <button class="lang-toggle-btn" onclick="toggleLanguage()" aria-label="Toggle Language">
+                        <span class="lang-id">EN</span>
+                        <span class="lang-en">ID</span>
+                    </button>
+                </div>
+                
+                <a href="booking.html" class="btn btn-primary nav-cta"><span class="lang-id">Pesan Sekarang</span><span class="lang-en">Book Now</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-bg-slider">
+            <div class="hero-slide active" style="background-image: linear-gradient(rgba(28, 43, 31, 0.45), rgba(28, 43, 31, 0.7)), url('https://i.ibb.co.com/RGvMznbL/Whats-App-Image-2023-12-18-at-10-43-33-1.jpg?auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="hero-slide" style="background-image: linear-gradient(rgba(28, 43, 31, 0.45), rgba(28, 43, 31, 0.7)), url('https://i.ibb.co.com/BKPMBPkB/Whats-App-Image-2023-12-24-at-19-27-00-1.jpg?auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="hero-slide" style="background-image: linear-gradient(rgba(28, 43, 31, 0.45), rgba(28, 43, 31, 0.7)), url('https://i.ibb.co.com/qFLd58Qj/image.png?auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="hero-slide" style="background-image: linear-gradient(rgba(28, 43, 31, 0.45), rgba(28, 43, 31, 0.7)), url('https://i.ibb.co.com/PvRPD5gb/DSC00467.jpg?auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="hero-slide" style="background-image: linear-gradient(rgba(28, 43, 31, 0.45), rgba(28, 43, 31, 0.7)), url('https://i.ibb.co.com/CKvTg8jL/Whats-App-Image-2023-12-18-at-10-43-47-1.jpg?auto=format&fit=crop&w=1920&q=80');"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-subtitle">
+                    <span class="lang-id">Selamat Datang di Augusta Sukabumi</span>
+                    <span class="lang-en">Welcome to Augusta Sukabumi</span>
+                </span>
+                <h1 class="hero-title">
+                    <span class="lang-id">Harmoni Ketenangan Alami & Kemewahan Modern</span>
+                    <span class="lang-en">Harmony of Natural Serenity & Modern Luxury</span>
+                </h1>
+                <p class="hero-description">
+                    <span class="lang-id">Nikmati keindahan pemandangan pegunungan dan kenyamanan kelas dunia bersama Augusta Hotel, Restaurant, Convention & Resort. Destinasi terbaik Anda di Sukabumi.</span>
+                    <span class="lang-en">Enjoy the beauty of mountain vistas and world-class comfort with Augusta Hotel, Restaurant, Convention & Resort. Your ultimate destination in Sukabumi.</span>
+                </p>
+                <div class="hero-actions">
+                    <a href="rooms.html" class="btn btn-primary btn-lg"><span class="lang-id">Eksplor Kamar</span><span class="lang-en">Explore Rooms</span></a>
+                    <a href="facilities.html" class="btn btn-outline btn-lg"><span class="lang-id">Lihat Fasilitas</span><span class="lang-en">View Facilities</span></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Booking Bar -->
+        <div class="container quick-booking-container">
+            <form class="quick-booking-bar" action="booking.html" method="GET" onsubmit="handleQuickBook(event)">
+                <div class="booking-input-group">
+                    <label for="quick-checkin"><i class="fa-regular fa-calendar-days text-accent"></i> Check-in</label>
+                    <input type="date" id="quick-checkin" required>
+                </div>
+                <div class="booking-input-group">
+                    <label for="quick-checkout"><i class="fa-regular fa-calendar-days text-accent"></i> Check-out</label>
+                    <input type="date" id="quick-checkout" required>
+                </div>
+                <div class="booking-input-group">
+                    <label for="quick-room"><i class="fa-solid fa-bed text-accent"></i> <span class="lang-id">Tipe Kamar</span><span class="lang-en">Room Type</span></label>
+                    <select id="quick-room">
+                        <option value="Suite">Suite Room</option>
+                        <option value="Glamping">Glamping Room</option>
+                        <option value="VIP">VIP Room</option>
+                        <option value="Deluxe 1">Deluxe 1</option>
+                        <option value="Deluxe 2">Deluxe 2</option>
+                        <option value="Superior" selected>Superior Room</option>
+                        <option value="Standard">Standard Room</option>
+                    </select>
+                </div>
+                <div class="booking-input-group">
+                    <label for="quick-guests"><i class="fa-solid fa-users text-accent"></i> <span class="lang-id">Tamu</span><span class="lang-en">Guests</span></label>
+                    <select id="quick-guests">
+                        <option value="1"><span class="lang-id">1 Orang</span><span class="lang-en">1 Person</span></option>
+                        <option value="2" selected><span class="lang-id">2 Orang</span><span class="lang-en">2 Persons</span></option>
+                        <option value="3"><span class="lang-id">3 Orang</span><span class="lang-en">3 Persons</span></option>
+                        <option value="4"><span class="lang-id">4+ Orang</span><span class="lang-en">4+ Persons</span></option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-accent btn-booking-submit"><span class="lang-id">Cek Tarif</span><span class="lang-en">Check Rates</span></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Welcome / Highlights Section -->
+    <section class="section-padding bg-light" style="padding-top: 140px;">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text-content">
+                    <span class="section-tag"><span class="lang-id">Selamat Datang</span><span class="lang-en">Welcome</span></span>
+                    <h2 class="section-title">
+                        <span class="lang-id">Gerbang Keindahan Alam & Kenyamanan Sukabumi</span>
+                        <span class="lang-en">Your Gateway to Nature & Comfort in Sukabumi</span>
+                    </h2>
+                    <p class="about-lead">
+                        <span class="lang-id">Augusta Sukabumi menghadirkan perpaduan sempurna antara keindahan alam pegunungan yang asri dan keramahtamahan Sunda yang hangat.</span>
+                        <span class="lang-en">Augusta Sukabumi brings the perfect blend of lush mountain scenic beauty and warm traditional Sundanese hospitality.</span>
+                    </p>
+                    <p>
+                        <span class="lang-id">Berlokasi strategis di Cicantayan, Sukabumi, kami menawarkan tempat istirahat ideal dari penatnya kota. Menyediakan 7 tingkatan kamar dari Standard hingga Suite mewah dan Glamping modern, didukung fasilitas olahraga lengkap seperti tennis court, driving range, dan kolam renang outdoor menyegarkan.</span>
+                        <span class="lang-en">Strategically located in Cicantayan, Sukabumi, we offer the perfect getaway from bustling city life. Featuring 7 tiers of rooms from Standard to luxury Suites and modern Glamping, supported by sports facilities like a tennis court, driving range, and refreshing outdoor pool.</span>
+                    </p>
+                    <div style="margin-top: 30px;">
+                        <a href="about.html" class="btn btn-outline"><span class="lang-id">Pelajari Tentang Kami</span><span class="lang-en">Learn About Us</span></a>
+                    </div>
+                </div>
+                <div class="about-media-content">
+                    <div class="map-wrapper" style="height: 380px;">
+                        <img src="https://i.ibb.co.com/RGvMznbL/Whats-App-Image-2023-12-18-at-10-43-33-1.jpg?auto=format&fit=crop&w=800&q=80" alt="Resort View" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Grid Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag"><span class="lang-id">Layanan Utama</span><span class="lang-en">Core Services</span></span>
+                <h2 class="section-title">
+                    <span class="lang-id">Destinasi Terintegrasi di Sukabumi</span>
+                    <span class="lang-en">Integrated Destination in Sukabumi</span>
+                </h2>
+                <p class="section-subtitle">
+                    <span class="lang-id">Kami menyediakan paket layanan rekreasi, kuliner, pertemuan, dan akomodasi terpadu di satu tempat.</span>
+                    <span class="lang-en">We provide integrated recreation, culinary, convention, and lodging packages all in one place.</span>
+                </p>
+            </div>
+
+            <div class="other-facilities-grid">
+                <div class="other-facility-card">
+                    <i class="fa-solid fa-bed"></i>
+                    <h4><span class="lang-id">7 Tipe Kamar</span><span class="lang-en">7 Room Tiers</span></h4>
+                    <p>
+                        <span class="lang-id">Dari Standard hemat, Glamping unik, hingga Suite Room termewah berfasilitas VIP.</span>
+                        <span class="lang-en">From budget Standard, unique Glamping, to luxurious Suite Rooms with VIP services.</span>
+                    </p>
+                    <a href="rooms.html" class="text-accent" style="font-size: 0.8rem; font-weight: 800; margin-top: 15px; display: inline-block;"><span class="lang-id">LIHAT KAMAR &rarr;</span><span class="lang-en">VIEW ROOMS &rarr;</span></a>
+                </div>
+                
+                <div class="other-facility-card">
+                    <i class="fa-solid fa-person-swimming"></i>
+                    <h4><span class="lang-id">Fasilitas Resort</span><span class="lang-en">Resort Facilities</span></h4>
+                    <p>
+                        <span class="lang-id">Kolam renang, ballroom, tennis court, driving range golf, jogging track, & playground.</span>
+                        <span class="lang-en">Pool, ballroom, tennis court, golf driving range, jogging track, & playground.</span>
+                    </p>
+                    <a href="facilities.html" class="text-accent" style="font-size: 0.8rem; font-weight: 800; margin-top: 15px; display: inline-block;"><span class="lang-id">LIHAT FASILITAS &rarr;</span><span class="lang-en">VIEW FACILITIES &rarr;</span></a>
+                </div>
+
+                <div class="other-facility-card">
+                    <i class="fa-solid fa-utensils"></i>
+                    <h4><span class="lang-id">Augusta Restaurant</span><span class="lang-en">Augusta Restaurant</span></h4>
+                    <p>
+                        <span class="lang-id">Hidangan tradisional Sunda autentik Sukabumi, menu Nusantara, dan favorit barat.</span>
+                        <span class="lang-en">Authentic traditional Sundanese food, Indonesian specialties, and western favorites.</span>
+                    </p>
+                    <a href="restaurant.html" class="text-accent" style="font-size: 0.8rem; font-weight: 800; margin-top: 15px; display: inline-block;"><span class="lang-id">LIHAT MENU &rarr;</span><span class="lang-en">VIEW MENU &rarr;</span></a>
+                </div>
+
+                <div class="other-facility-card">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h4><span class="lang-id">Convention & Paket</span><span class="lang-en">Convention & Packages</span></h4>
+                    <p>
+                        <span class="lang-id">Paket khusus untuk pernikahan romantis, rapat bisnis korporat, gathering, & outbound.</span>
+                        <span class="lang-en">Special packages for romantic weddings, corporate meetings, outings, & outbound.</span>
+                    </p>
+                    <a href="booking.html#paket" class="text-accent" style="font-size: 0.8rem; font-weight: 800; margin-top: 15px; display: inline-block;"><span class="lang-id">LIHAT PAKET &rarr;</span><span class="lang-en">VIEW PACKAGES &rarr;</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="section-padding bg-primary text-white text-center" style="position: relative; overflow: hidden;">
+        <div class="container" style="position: relative; z-index: 2; max-width: 800px;">
+            <h2 style="font-size: 2.3rem; font-weight: 800; margin-bottom: 20px;">
+                <span class="lang-id">Dapatkan Estimasi Harga Langsung & Pesan Via WhatsApp</span>
+                <span class="lang-en">Get Instant Pricing & Book Securely Via WhatsApp</span>
+            </h2>
+            <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 35px; line-height: 1.6;">
+                <span class="lang-id">Gunakan kalkulator reservasi kami untuk merinci biaya menginap sesuai tipe kamar dan tanggal pilihan Anda, lalu hubungi admin kami secara praktis lewat sekali klik.</span>
+                <span class="lang-en">Use our interactive reservation calculator to break down your stay costs based on room type and dates, then connect with our admins with a single click.</span>
+            </p>
+            <a href="booking.html" class="btn btn-accent btn-lg"><span class="lang-id">Mulai Reservasi Sekarang</span><span class="lang-en">Start Reservation Now</span></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-column">
+                <img src="images/Augusta Sukabumi.png" data-fallback="images/Augusta Sukabumi.png" alt="Augusta Hotel Logo" class="hotel-logo-img">
+                <p class="footer-about-text">
+                    <span class="lang-id">Akomodasi resort dan konvensi terintegrasi terkemuka di Sukabumi. Memadukan kenyamanan fasilitas modern dengan nuansa alam pegunungan yang menyejukkan hati.</span>
+                    <span class="lang-en">A leading integrated resort and convention accommodation in Sukabumi. Blending modern facility comforts with a soothing mountain nature vibe.</span>
+                </p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/augustacikukulu/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/6285795441992" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links-column">
+                <h3>Navigasi</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Beranda</span><span class="lang-en">Home</span></a></li>
+                    <li><a href="rooms.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Tipe Kamar</span><span class="lang-en">Room Tiers</span></a></li>
+                    <li><a href="facilities.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Fasilitas Resort</span><span class="lang-en">Resort Facilities</span></a></li>
+                    <li><a href="restaurant.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Menu Restoran</span><span class="lang-en">Restaurant Menu</span></a></li>
+                    <li><a href="booking.html#paket"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Paket Augusta</span><span class="lang-en">Special Packages</span></a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Tentang Kami</span><span class="lang-en">About Us</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="footer-contact-column">
+                <h3>Hubungi Kami</h3>
+                <ul class="footer-contact-info">
+                    <li>
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <span>Jl. Raya Cikukulu No.72, Cisande, Kec. Cicantayan, Kabupaten Sukabumi, Jawa Barat 43155</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>0857 9544 1992</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-instagram"></i>
+                        <span><a href="https://www.instagram.com/augustacikukulu/" target="_blank" class="footer-link-highlight">@augustacikukulu</a></span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span><a href="https://wa.me/6285795441992" target="_blank" class="footer-link-highlight">Chat WhatsApp Reservasi</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom text-center">
+            <div class="container">
+                <p>&copy; 2026 Augusta Hotel & Resort Sukabumi. <span class="lang-id">Seluruh hak cipta dilindungi undang-undang.</span><span class="lang-en">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+</body>
+</html>

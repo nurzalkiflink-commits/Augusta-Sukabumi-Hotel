@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augusta Restaurant - Menu Kuliner Sukabumi</title>
+    <meta name="description" content="Cicipi cita rasa autentik hidangan khas Sunda tradisional Sukabumi, masakan Nusantara, dan menu Barat favorit di Augusta Restaurant.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M25,30 C35,30 45,30 45,45 C45,60 35,60 25,60 C15,60 15,45 15,45 C15,30 25,30 Z M75,30 C65,30 55,30 55,45 C55,60 65,60 75,60 C85,60 85,45 85,45 C85,30 75,30 Z' fill='%23E43F15'/%3E%3C/svg%3E">
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem('augusta-lang');
+            if (savedLang === 'en') {
+                document.documentElement.classList.add('lang-en-active');
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-info-left">
+                <span><i class="fa-solid fa-location-dot"></i> Jl. Raya Cikukulu No.72, Sukabumi</span>
+                <span class="separator">|</span>
+                <span><i class="fa-solid fa-phone"></i> 0857 9544 1992</span>
+            </div>
+            <div class="top-info-right">
+                <a href="https://www.instagram.com/augustacikukulu/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/6285795441992" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Header & Navbar -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-container" aria-label="Augusta Hotel Home">
+                <img src="images/Augusta Sukabumi.png" data-fallback="images/Augusta-Sukabumi.png" alt="Augusta Hotel Logo" class="hotel-logo-img">
+            </a>
+
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav id="primary-navigation" class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><span class="lang-id">Beranda</span><span class="lang-en">Home</span></a></li>
+                    <li class="nav-item dropdown">
+                        <a href="rooms.html" class="nav-link dropdown-toggle"><span class="lang-id">Room</span><span class="lang-en">Room</span> <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="rooms.html?room=Suite">Suite Room</a></li>
+                            <li><a href="rooms.html?room=Glamping">Glamping Room</a></li>
+                            <li><a href="rooms.html?room=VIP">VIP Room</a></li>
+                            <li><a href="rooms.html?room=Deluxe 1">Deluxe 1</a></li>
+                            <li><a href="rooms.html?room=Deluxe 2">Deluxe 2</a></li>
+                            <li><a href="rooms.html?room=Superior">Superior Room</a></li>
+                            <li><a href="rooms.html?room=Standard">Standard Room</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="facilities.html" class="nav-link"><span class="lang-id">Fasilitas</span><span class="lang-en">Facilities</span></a></li>
+                    <li class="nav-item"><a href="restaurant.html" class="nav-link active"><span class="lang-id">Menu Restoran</span><span class="lang-en">Restaurant</span></a></li>
+                    <li class="nav-item"><a href="booking.html#paket" class="nav-link"><span class="lang-id">Paket Augusta</span><span class="lang-en">Packages</span></a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link"><span class="lang-id">Tentang Kami</span><span class="lang-en">About Us</span></a></li>
+                </ul>
+                
+                <!-- Language Switcher -->
+                <div class="nav-controls">
+                    <button class="lang-toggle-btn" onclick="toggleLanguage()" aria-label="Toggle Language">
+                        <span class="lang-id">EN</span>
+                        <span class="lang-en">ID</span>
+                    </button>
+                </div>
+                
+                <a href="booking.html" class="btn btn-primary nav-cta"><span class="lang-id">Pesan Sekarang</span><span class="lang-en">Book Now</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header Banner -->
+    <section class="page-header-banner" style="background-image: linear-gradient(rgba(28, 43, 31, 0.6), rgba(28, 43, 31, 0.8)), url('https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=1920&q=80');">
+        <div class="container">
+            <h1><span class="lang-id">Augusta Restaurant Menu</span><span class="lang-en">Augusta Restaurant Menu</span></h1>
+            <p><span class="lang-id">Cita rasa warisan tradisional Sunda dan pilihan kuliner favorit Nusantara & Internasional</span><span class="lang-en">A heritage taste of traditional Sundanese and favorite local & international delights</span></p>
+        </div>
+    </section>
+
+    <!-- Restaurant Section -->
+    <section class="restaurant-section section-padding" style="padding-top: 80px;">
+        <div class="container">
+            <!-- Restaurant Menu Tabs & Showcase -->
+            <div class="restaurant-menu-container">
+                <div class="menu-tabs">
+                    <button class="menu-tab-btn active" onclick="filterMenu('sunda')">
+                        <span class="lang-id">Khas Sunda</span><span class="lang-en">Sundanese</span>
+                    </button>
+                    <button class="menu-tab-btn" onclick="filterMenu('nusantara')">
+                        <span class="lang-id">Nusantara & Asia</span><span class="lang-en">Asian Specialties</span>
+                    </button>
+                    <button class="menu-tab-btn" onclick="filterMenu('western')">
+                        <span class="lang-id">Menu Barat (Western)</span><span class="lang-en">Western Favorites</span>
+                    </button>
+                    <button class="menu-tab-btn" onclick="filterMenu('drinks')">
+                        <span class="lang-id">Minuman & Dessert</span><span class="lang-en">Drinks & Dessert</span>
+                    </button>
+                </div>
+
+                <div class="menu-grid">
+                    <!-- Sunda Items -->
+                    <div class="menu-card" data-category="sunda">
+                        <div class="menu-img-holder">
+                            <img src="images/restaurant/nasi_timbel.jpg" data-fallback="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=600&q=80" alt="Nasi Timbel Komplit" class="menu-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-details">
+                            <div class="menu-header-row">
+                                <h4>Nasi Timbel Komplit</h4>
+                                <span class="menu-price">Rp 55.000</span>
+                            </div>
+                            <p class="menu-desc lang-id">Nasi hangat berbungkus daun pisang disajikan dengan ayam goreng bumbu Sunda, tempe & tahu goreng, ikan asin renyah, lalapan segar, dan sambal terasi khas Augusta.</p>
+                            <p class="menu-desc lang-en">Warm banana-leaf wrapped rice served with Sundanese seasoned fried chicken, fried tofu & tempeh, crispy salted fish, fresh raw salad (lalap), and Augusta’s signature chili paste.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="sunda">
+                        <div class="menu-img-holder">
+                            <img src="images/restaurant/gurame_bakar.jpg" data-fallback="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=600&q=80" alt="Gurame Bakar Cobek" class="menu-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-details">
+                            <div class="menu-header-row">
+                                <h4>Gurame Bakar Cobek</h4>
+                                <span class="menu-price">Rp 85.000</span>
+                            </div>
+                            <p class="menu-desc lang-id">Ikan gurame segar pilihan dibakar dengan bumbu kecap manis rempah, disiram sambal goang mentah khas Sunda di atas cobek tanah liat hangat.</p>
+                            <p class="menu-desc lang-en">Fresh selected carp fish grilled with sweet soy and spices, topped with traditional raw hot chili paste (sambal goang) on a warm earthenware claypot.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="sunda">
+                        <div class="menu-img-holder">
+                            <img src="images/restaurant/karedok.jpg" data-fallback="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=600&q=80" alt="Karedok Sukabumi" class="menu-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-details">
+                            <div class="menu-header-row">
+                                <h4>Karedok Tradisional</h4>
+                                <span class="menu-price">Rp 28.000</span>
+                            </div>
+                            <p class="menu-desc lang-id">Aneka sayuran segar mentah (kacang panjang, kol, taoge, timun, daun kemangi) disiram saus kacang kental berbumbu kencur wangi yang segar.</p>
+                            <p class="menu-desc lang-en">Assorted fresh raw vegetables (long beans, cabbage, bean sprouts, cucumber, basil) drizzled with a thick peanut sauce seasoned with aromatic ginger lily.</p>
+                        </div>
+                    </div>
+
+                    <!-- Nusantara & Asia Items -->
+                    <div class="menu-card" data-category="nusantara" style="display:none;">
+                        <div class="menu-img-holder">
+                            <img src="images/restaurant/sop_buntut.jpg" data-fallback="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Sop Buntut Augusta" class="menu-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-details">
+                            <div class="menu-header-row">
+                                <h4>Sop Buntut Premium</h4>
+                                <span class="menu-price">Rp 95.000</span>
+                            </div>
+                            <p class="menu-desc lang-id">Potongan buntut sapi lokal tebal dimasak perlahan dalam kuah kaldu rempah yang kaya rasa, disajikan dengan wortel, kentang empuk, emping renyah, dan sambal hijau.</p>
+                            <p class="menu-desc lang-en">Thick cuts of local beef oxtail slow-cooked in a rich, aromatic spiced broth, served with tender carrots, potatoes, crispy emping crackers, and green chili.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="nusantara" style="display:none;">
+                        <div class="menu-img-holder">
+                            <img src="images/restaurant/nasi_goreng.jpg" data-fallback="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Nasi Goreng Augusta" class="menu-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-details">
+                            <div class="menu-header-row">
+                                <h4>Nasi Goreng Augusta</h4>
+                                <span class="menu-price">Rp 45.000</span>
+                            </div>
+                            <p class="menu-desc lang-id">Nasi goreng khas resep rahasia koki Augusta dengan campuran daging ayam, bakso, udang, disajikan dengan telur mata sapi, sate ayam, dan acar segar.</p>
+                            <p class="menu-desc lang-en">Special recipe fried rice by Augusta’s chef mixed with shredded chicken, meatballs, shrimp, served with a sunny-side-up egg, chicken satay, and pickles.</p>
+                        </div>
+                    </div>
+
+                    <!-- Western Items -->
+                    <div class="menu-card" data-category="western" style="display:none;">
+                        <div class="menu-img-holder">
+                            <img src="images/restaurant/steak.jpg" data-fallback="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Sirloin Steak" class="menu-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-details">
+                            <div class="menu-header-row">
+                                <h4>Prime Sirloin Steak</h4>
+                                <span class="menu-price">Rp 125.000</span>
+                            </div>
+                            <p class="menu-desc lang-id">Daging sapi Sirloin impor pilihan dipanggang sesuai tingkat kematangan selera Anda, disajikan dengan kentang goreng/tumbuk dan pilihan saus lada hitam gurih.</p>
+                            <p class="menu-desc lang-en">Imported Sirloin beef steak grilled to your desired doneness, served with french fries or mashed potatoes and savory black pepper sauce.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="western" style="display:none;">
+                        <div class="menu-img-holder">
+                            <img src="images/restaurant/cordon_bleu.jpg" data-fallback="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Chicken Cordon Bleu" class="menu-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-details">
+                            <div class="menu-header-row">
+                                <h4>Chicken Cordon Bleu</h4>
+                                <span class="menu-price">Rp 65.000</span>
+                            </div>
+                            <p class="menu-desc lang-id">Dada ayam fillet gulung isi daging asap dan keju mozzarella lumer dilapisi tepung panir renyah, disajikan dengan saus krim jamur hangat.</p>
+                            <p class="menu-desc lang-en">Rolled chicken breast filled with smoked beef and melted mozzarella, coated in crispy breadcrumbs, served with warm creamy mushroom sauce.</p>
+                        </div>
+                    </div>
+
+                    <!-- Drinks & Dessert Items -->
+                    <div class="menu-card" data-category="drinks" style="display:none;">
+                        <div class="menu-img-holder">
+                            <img src="images/restaurant/kelapa_jeruk.jpg" data-fallback="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80" alt="Es Kelapa Jeruk" class="menu-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-details">
+                            <div class="menu-header-row">
+                                <h4>Es Kelapa Jeruk Madu</h4>
+                                <span class="menu-price">Rp 25.000</span>
+                            </div>
+                            <p class="menu-desc lang-id">Kombinasi air kelapa muda manis serut asli dan perasan jeruk manis segar alami, ditambahkan pemanis madu hutan murni serta es batu dingin.</p>
+                            <p class="menu-desc lang-en">Combination of natural sweet shredded young coconut water and freshly squeezed citrus orange juice, sweetened with pure wild honey and ice.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="drinks" style="display:none;">
+                        <div class="menu-img-holder">
+                            <img src="images/restaurant/pisang_bakar.jpg" data-fallback="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80" alt="Pisang Bakar Keju" class="menu-img" loading="lazy">
+                        </div>
+                        <div class="menu-card-details">
+                            <div class="menu-header-row">
+                                <h4>Pisang Bakar Cokelat Keju</h4>
+                                <span class="menu-price">Rp 22.000</span>
+                            </div>
+                            <p class="menu-desc lang-id">Pisang uli matang manis dipanggang mentega, disajikan dengan taburan keju cheddar parut tebal, meses cokelat manis, dan siraman susu kental manis.</p>
+                            <p class="menu-desc lang-en">Sweet ripe plantains grilled with butter, served topped with thick grated cheddar cheese, sweet chocolate sprinkles, and condensed milk.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-column">
+                <img src="images/Augusta Sukabumi.png" data-fallback="images/Augusta Sukabumi.png" alt="Augusta Hotel Logo" class="hotel-logo-img">
+                <p class="footer-about-text">
+                    <span class="lang-id">Akomodasi resort dan konvensi terintegrasi terkemuka di Sukabumi. Memadukan kenyamanan fasilitas modern dengan nuansa alam pegunungan yang menyejukkan hati.</span>
+                    <span class="lang-en">A leading integrated resort and convention accommodation in Sukabumi. Blending modern facility comforts with a soothing mountain nature vibe.</span>
+                </p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/augustacikukulu/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/6285795441992" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links-column">
+                <h3>Navigasi</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Beranda</span><span class="lang-en">Home</span></a></li>
+                    <li><a href="rooms.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Tipe Kamar</span><span class="lang-en">Room Tiers</span></a></li>
+                    <li><a href="facilities.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Fasilitas Resort</span><span class="lang-en">Resort Facilities</span></a></li>
+                    <li><a href="restaurant.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Menu Restoran</span><span class="lang-en">Restaurant Menu</span></a></li>
+                    <li><a href="booking.html#paket"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Paket Augusta</span><span class="lang-en">Special Packages</span></a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span class="lang-id">Tentang Kami</span><span class="lang-en">About Us</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="footer-contact-column">
+                <h3>Hubungi Kami</h3>
+                <ul class="footer-contact-info">
+                    <li>
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <span>Jl. Raya Cikukulu No.72, Cisande, Kec. Cicantayan, Kabupaten Sukabumi, Jawa Barat 43155</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>0857 9544 1992</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-instagram"></i>
+                        <span><a href="https://www.instagram.com/augustacikukulu/" target="_blank" class="footer-link-highlight">@augustacikukulu</a></span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span><a href="https://wa.me/6285795441992" target="_blank" class="footer-link-highlight">Chat WhatsApp Reservasi</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom text-center">
+            <div class="container">
+                <p>&copy; 2026 Augusta Hotel & Resort Sukabumi. <span class="lang-id">Seluruh hak cipta dilindungi undang-undang.</span><span class="lang-en">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+</body>
+</html>
